@@ -1,25 +1,13 @@
-/* #slider{
-  background: linear-gradient(to bottom,#F00,#FF0,#0F0,#0FF,#00F,#F0F,#F00);
-  box-sizing: border-box;
-  flex-shrink: 0;
-  margin:20px;
-  border-radius:100px;
-} */
-
 #dragger, #dragger2{
   position:absolute;
 }
 
 #pip{
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.4);
-  /* border: 1px solid rgba(255,255,255,.7); */
 }
 
 #circlePip{
-  /* border: 1px solid rgba(255,255,255,.7); */
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.4);
-  /* border: 1px solid rgba(255,255,255,.7);
-  box-sizing: border-box; */
 }
 
 #pip, #circlePip{
@@ -43,11 +31,10 @@ input{
   color:inherit;
   font-size:inherit;
   text-align: center;
-  margin: 5px;
   padding: 0;
   display: inline;
-  width: 60px;
-  background: rgba(255,255,255,.3);
+  width: 30px;
+  /* background: rgba(255,255,255,.3); */
   border-radius: 100px;
   transition: background .3s, color .3s;
 }
@@ -70,10 +57,9 @@ span{
 
 #swatch{
   font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0 0 0 5px;
   display:flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -138,4 +124,23 @@ html,body{
   color: white;
   background: linear-gradient(140deg,#333,black);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.4);
+}
+
+
+#spectrumContainerOuter{
+  background: radial-gradient(at 100px 100px, #444 0%, black 70%);
+  padding: 20px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.4);
+}
+
+.track{
+  height: 100%;
+  width: 209px;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.4)
 }

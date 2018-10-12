@@ -32,24 +32,16 @@ export const initializeSwatch = (containerWidth) => {
       //input.addEventListener('focus',e=>e.target.select());
     })
 
-    const inputContainer = create('DIV', swatch, {
-        id: 'inputContainer'
-      });
 
-    const redHolder = create('DIV', inputContainer);
-    redHolder.classList.add('vertical-center');
-    create('SPAN', redHolder,{innerHTML:'R'});
-    redHolder.append(red);
+    create('SPAN', swatch,{innerHTML:'rgb('});
+    swatch.append(red);
 
-    const greenHolder = create('DIV', inputContainer);
-    greenHolder.classList.add('vertical-center');
-    create('SPAN', greenHolder,{innerHTML:'G'});
-    greenHolder.append(green);
+    create('SPAN', swatch,{innerHTML:','});
+    swatch.append(green);
 
-    const blueHolder = create('DIV', inputContainer);
-    blueHolder.classList.add('vertical-center');
-    create('SPAN', blueHolder,{innerHTML:'B'});
-    blueHolder.append(blue);
+    create('SPAN', swatch,{innerHTML:','});
+    swatch.append(blue);
+    create('SPAN', swatch,{innerHTML:')'});
 
     const copyHolder = create('DIV', swatch,{},{
       height: '35px',

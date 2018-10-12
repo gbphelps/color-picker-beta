@@ -38,18 +38,6 @@ export const initializeTrioSliders = () => {
     }
   };
 
-  const trackStyle = {
-    background: '#000',
-    height: '100%',
-    width: '209px',
-    position: 'absolute',
-    top: 0,
-    left: '1px',
-    'border-radius': '5px',
-    'box-shadow': '0 2px 2px 0 rgba(0,0,0,.4)'
-  }
-
-
   const offset = 10
   const radius = offset + 20 + spectrumContainer.width/2;
 
@@ -80,7 +68,10 @@ export const initializeTrioSliders = () => {
     }, sliderStyle)
   redSlider.style.left = xCoords[2] + 'px';
 
-  create('DIV', redSlider,{},trackStyle)
+  const track1 = create('DIV', redSlider, {}, {
+    background: 'rgba(255,0,0,.5)'
+  });
+  track1.classList.add('track');
 
   const redDragger =
     create('DIV', redSlider,{
@@ -103,7 +94,7 @@ export const initializeTrioSliders = () => {
     },{
       height: '10px',
       width: '200px',
-      background: 'linear-gradient(to left, #f00, #f55 200px)',
+      background: 'red',
       position:'absolute',
       top: 0,
       left: 0,
@@ -119,7 +110,10 @@ export const initializeTrioSliders = () => {
     },sliderStyle)
   greenSlider.style.left = xCoords[1] + 'px';
 
-    create('DIV', greenSlider,{},trackStyle)
+  const track2 = create('DIV', greenSlider,{},{
+    background: 'rgba(0,255,0,.48)'
+  });
+  track2.classList.add('track')
 
   const greenDragger =
     create('DIV', greenSlider,{
@@ -141,11 +135,10 @@ export const initializeTrioSliders = () => {
     },{
       height: '10px',
       width: 0,
-      background: 'linear-gradient(to left,#0f0, #7f7 200px)',
-      position:'absolute',
+      background: 'lime',
       top: 0,
       left: 0,
-      'border-radius': '5px'
+      'border-radius': '5px',
     })
 
 
@@ -158,7 +151,10 @@ export const initializeTrioSliders = () => {
     },sliderStyle)
   blueSlider.style.left = xCoords[0] + 'px';
 
-    create('DIV', blueSlider,{},trackStyle)
+  const track3 = create('DIV', blueSlider,{},{
+    background: 'rgba(0,0,255,.5)'
+  });
+  track3.classList.add('track')
 
   const blueDragger =
     create('DIV', blueSlider,{
@@ -180,7 +176,7 @@ export const initializeTrioSliders = () => {
     },{
       height: '10px',
       width: 0,
-      background: 'linear-gradient(to left,#00f, #44f 200px)',
+      background: 'blue',
       position:'absolute',
       top: 0,
       left: 0,
