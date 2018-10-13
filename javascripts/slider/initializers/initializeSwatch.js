@@ -33,15 +33,24 @@ export const initializeSwatch = (containerWidth) => {
     })
 
 
-    create('SPAN', swatch,{innerHTML:'rgb('});
-    swatch.append(red);
+    // height: '20px',
+    // width: '20px',
+    // background: 'red',
+    // 'border-radius': '50%',
+    // 'box-sizing': 'border-box',
+    // display: 'inline-block',
 
-    create('SPAN', swatch,{innerHTML:','});
-    swatch.append(green);
+    const redholder = create('DIV',swatch);
+    create('SPAN', redholder,{innerHTML:'R '});
+    redholder.append(red);
 
-    create('SPAN', swatch,{innerHTML:','});
-    swatch.append(blue);
-    create('SPAN', swatch,{innerHTML:')'});
+    const greenholder = create('DIV',swatch);
+    create('SPAN', greenholder,{innerHTML:'G '});
+    greenholder.append(green);
+
+    const blueholder = create('DIV',swatch);
+    create('SPAN', blueholder,{innerHTML:'B '});
+    blueholder.append(blue);
 
     const copyHolder = create('DIV', swatch,{},{
       height: '35px',

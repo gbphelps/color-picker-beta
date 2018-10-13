@@ -24,16 +24,21 @@
   display: inline-block;
 }
 
+
+*{
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 18px;
+}
+
 input{
   background: none;
   border: none;
-  font-family: 'Roboto Mono', monospace;
   color:inherit;
-  font-size:inherit;
+
   text-align: center;
   padding: 0;
   display: inline;
-  width: 30px;
+  width: 50px;
   height: 30px;
   /* background: rgba(255,255,255,.3); */
   border-radius: 100px;
@@ -57,10 +62,9 @@ span{
 } */
 
 #swatch{
-  font-family: 'Roboto Mono', monospace;
-  font-size: 12px;
   margin: 0 0 0 5px;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
