@@ -42,15 +42,15 @@ export const initializeSwatch = (containerWidth) => {
 
     const redholder = create('DIV',swatch);
     create('SPAN', redholder,{innerHTML:'R '});
-    redholder.append(red);
+    redholder.appendChild(red);
 
     const greenholder = create('DIV',swatch);
     create('SPAN', greenholder,{innerHTML:'G '});
-    greenholder.append(green);
+    greenholder.appendChild(green);
 
     const blueholder = create('DIV',swatch);
     create('SPAN', blueholder,{innerHTML:'B '});
-    blueholder.append(blue);
+    blueholder.appendChild(blue);
 
     const copyHolder = create('DIV', swatch,{},{
       height: '35px',
@@ -80,7 +80,7 @@ export const initializeSwatch = (containerWidth) => {
       text.value = pip.style.background;
       text.setAttribute('readonly','');
       text.style = {position: 'absolute', left: '-9999px'};
-      document.body.append(text);
+      document.body.appendChild(text);
       text.select();
       document.execCommand('copy');
       text.remove();

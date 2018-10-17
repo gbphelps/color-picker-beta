@@ -3,7 +3,7 @@ export const format = color => `rgb(${color[0]},${color[1]},${color[2]})`;
 export const create = (tag, parent, props, style) => {
   const element = document.createElement(tag);
   Object.assign(element, props);
-  parent.append(element);
+  parent.appendChild(element);
   if (style) Object.assign(element.style, style);
   return element;
 };
